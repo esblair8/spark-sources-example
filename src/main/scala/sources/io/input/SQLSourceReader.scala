@@ -1,8 +1,8 @@
-package aquaq.io.input
+package sources.io.input
 
-import aquaq.DataFrameSource
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.{Column, DataFrame, SQLContext}
+import sources.DataFrameSource
 
 class SQLSourceReader[T <: SQLContext](
                                         val source: DataFrameSource[T]

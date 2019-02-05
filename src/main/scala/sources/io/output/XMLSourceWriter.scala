@@ -1,4 +1,4 @@
-package aquaq.io.output
+package sources.io.output
 
 import org.apache.spark.sql.{DataFrame, SaveMode}
 

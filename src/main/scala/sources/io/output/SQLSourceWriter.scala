@@ -1,8 +1,8 @@
-package aquaq.io.output
+package sources.io.output
 
-import aquaq.DataFrameSource
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.hive.HiveContext
+import sources.DataFrameSource
 
 class SQLSourceWriter(source: DataFrameSource[HiveContext]) extends DataFrameWriter {
 
