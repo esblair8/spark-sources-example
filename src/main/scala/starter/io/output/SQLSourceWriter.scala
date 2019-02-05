@@ -1,8 +1,8 @@
-package sources.io.output
+package starter.io.output
 
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.hive.HiveContext
-import sources.DataFrameSource
+import starter.DataFrameSource
 
 class SQLSourceWriter(source: DataFrameSource[HiveContext]) extends DataFrameWriter {
 

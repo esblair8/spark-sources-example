@@ -1,8 +1,8 @@
-package sources.io.input
+package starter.io.input
 
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.{Column, DataFrame, SQLContext}
-import sources.DataFrameSource
+import starter.DataFrameSource
 
 class SQLSourceReader[T <: SQLContext](
                                         val source: DataFrameSource[T]
