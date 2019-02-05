@@ -12,10 +12,10 @@ class SQLSourceReader_SparkTest extends FunSuite with DataFrameSuiteBase with Ma
 
   after()
 
-  test("Rows can be read from a source")
+  test("Rows can be read from a source") {}
 
-  test("Columns can be selected from a source")
+  test("Columns can be selected from a source") {}
 
-  test("rows can be filtered from a source")
+  test("rows can be filtered from a source") {}
 }
 

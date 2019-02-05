@@ -11,5 +11,5 @@ class XMLSourceWriter_SparkTest extends FunSuite with DataFrameSuiteBase with Ma
   before()
   after()
 
-  test("Rows can be written to a source")
+  test("Rows can be written to a source") {}
 }
