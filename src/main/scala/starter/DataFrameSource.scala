@@ -8,7 +8,7 @@ import org.apache.spark.sql.types.StructType
   *
   * @tparam T The type of the context
   */
-trait DataFrameSource[T] extends SourceContext[T] {
+trait DataFrameSource[T] extends SourceSession[T] {
 
   /**
     * Defines the name of the source

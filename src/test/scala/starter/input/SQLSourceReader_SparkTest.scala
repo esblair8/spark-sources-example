@@ -1,12 +1,12 @@
 package starter.input
 
-import com.holdenkarau.spark.testing.DataFrameSuiteBase
+import com.github.mrpowers.spark.fast.tests.DataFrameComparer
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.{BeforeAndAfter, FunSuite, Matchers}
 
 @RunWith(classOf[JUnitRunner])
-class SQLSourceReader_SparkTest extends FunSuite with DataFrameSuiteBase with Matchers with BeforeAndAfter {
+class SQLSourceReader_SparkTest extends FunSuite with DataFrameComparer with Matchers with BeforeAndAfter {
 
   before()
 

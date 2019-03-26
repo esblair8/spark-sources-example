@@ -16,9 +16,9 @@ class SQLSourceReader[T <: SQLContext](
     */
   override def read(filters: Column, columns: Seq[String]): DataFrame = {
     val tableName = s"${source.serviceArea}.${source.name}"
-    source.sourceContext.table(tableName).
-      filter(filters).
-      select(columns.map(col): _*)
+    source.sourceSession.table(tableName)
+      .filter(filters)
+      .select(columns.map(col): _*)
   }
 
   /**
@@ -29,8 +29,8 @@ class SQLSourceReader[T <: SQLContext](
     */
   override def read(columns: Seq[String]): DataFrame = {
     val tableName = s"${source.serviceArea}.${source.name}"
-    source.sourceContext.table(tableName).
-      select(columns.map(col): _*)
+    source.sourceSession.table(tableName)
+      .select(columns.map(col): _*)
   }
 
   /**
@@ -41,8 +41,8 @@ class SQLSourceReader[T <: SQLContext](
     */
   override def read(filters: Column): DataFrame = {
     val tableName = s"${source.serviceArea}.${source.name}"
-    source.sourceContext.table(tableName).
-      filter(filters)
+    source.sourceSession.table(tableName)
+      .filter(filters)
   }
 
   /**
@@ -52,8 +52,6 @@ class SQLSourceReader[T <: SQLContext](
     */
   override def read(): DataFrame = {
     val tableName = s"${source.serviceArea}.${source.name}"
-    source.sourceContext.table(tableName)
+    source.sourceSession.table(tableName)
   }
-
-
 }

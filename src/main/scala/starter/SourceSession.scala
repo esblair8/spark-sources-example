@@ -5,10 +5,10 @@ package starter
   *
   * @tparam T The type of the context
   */
-trait SourceContext[T] {
+trait SourceSession[T] {
 
   /**
     * Get the source context
     */
-  def sourceContext: T
+  def sourceSession: T
 }

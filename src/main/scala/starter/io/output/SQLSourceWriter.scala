@@ -1,10 +1,9 @@
 package starter.io.output
 
-import org.apache.spark.sql.DataFrame
-import org.apache.spark.sql.hive.HiveContext
+import org.apache.spark.sql.{DataFrame, SparkSession}
 import starter.DataFrameSource
 
-class SQLSourceWriter(source: DataFrameSource[HiveContext]) extends DataFrameWriter {
+class SQLSourceWriter(source: DataFrameSource[SparkSession]) extends DataFrameWriter {
 
   /**
     * Persist a data frame to a source
