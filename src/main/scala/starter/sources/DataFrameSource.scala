@@ -1,4 +1,4 @@
-package starter
+package starter.sources
 
 import org.apache.spark.sql.SaveMode
 import org.apache.spark.sql.types.StructType

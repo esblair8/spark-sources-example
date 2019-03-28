@@ -1,9 +1,9 @@
 package starter.io.output
 
 import org.apache.spark.sql.{DataFrame, SparkSession}
-import starter.DataFrameSource
+import starter.sources.DataFrameSource
 
-class SQLSourceWriter(source: DataFrameSource[SparkSession]) extends DataFrameWriter {
+class SQLSourceWriter(source : DataFrameSource[SparkSession]) extends DataFrameWriter {
 
   /**
     * Persist a data frame to a source

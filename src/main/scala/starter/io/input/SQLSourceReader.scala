@@ -2,7 +2,7 @@ package starter.io.input
 
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.{Column, DataFrame, SQLContext}
-import starter.DataFrameSource
+import starter.sources.DataFrameSource
 
 class SQLSourceReader[T <: SQLContext](
                                         val source: DataFrameSource[T]

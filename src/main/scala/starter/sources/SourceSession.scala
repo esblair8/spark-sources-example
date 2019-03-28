@@ -1,4 +1,4 @@
-package starter
+package starter.sources
 
 /**
   * Trait for defining the context of a source
