@@ -4,9 +4,7 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.{Column, DataFrame, SparkSession}
 import starter.sources.DataFrameSource
 
-class SQLSourceReader[T <: SparkSession](
-                                        val source: DataFrameSource[T]
-                                      ) extends DataFrameReader {
+class SQLSourceReader[T <: SparkSession](val source: DataFrameSource[T]) extends DataFrameReader {
   /**
     * Read a Data frame from the Source
     *

@@ -1,8 +1,7 @@
-package starter.sources.input
+package starter.sources
 
 import org.apache.spark.sql.types.{StringType, StructField, StructType}
 import org.apache.spark.sql.{SaveMode, SparkSession}
-import starter.sources.{DataFrameSource, SourceColumnDefinitions}
 
 class InputSource(implicit session: SparkSession) extends DataFrameSource[SparkSession] {
   /**
@@ -36,6 +35,9 @@ class InputSource(implicit session: SparkSession) extends DataFrameSource[SparkS
   override def sourceSession: SparkSession = session
 }
 
+/**
+  * Companion object containing column names and schema
+  */
 object InputSource {
   val someColumnName: String = "someColumnName"
   val otherColumn: String = "otherColumn"

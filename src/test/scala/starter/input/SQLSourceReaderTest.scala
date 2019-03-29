@@ -2,7 +2,7 @@ package starter.input
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
-import starter.utils.TestingBase
+import starter.testUtils.TestingBase
 
 @RunWith(classOf[JUnitRunner])
 class SQLSourceReaderTest extends TestingBase {

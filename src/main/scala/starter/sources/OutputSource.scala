@@ -1,9 +1,12 @@
-package starter.sources.output
+package starter.sources
 
 import org.apache.spark.sql.types.{LongType, StringType, StructField, StructType}
 import org.apache.spark.sql.{SaveMode, SparkSession}
-import starter.sources.DataFrameSource
 
+/** Source Definition of the Output Table
+  *
+  * @param session
+  */
 class OutputSource(implicit session: SparkSession) extends DataFrameSource[SparkSession] {
   /**
     * Defines the name of the source
@@ -36,6 +39,9 @@ class OutputSource(implicit session: SparkSession) extends DataFrameSource[Spark
   override def sourceSession: SparkSession = session
 }
 
+/**
+  * Companion object containing column names and schema
+  */
 object OutputSource {
   val someColumnName: String = "someColumnName"
   val countColumn: String = "count"

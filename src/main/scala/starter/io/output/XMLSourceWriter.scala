@@ -12,7 +12,7 @@ class XMLSourceWriter(
                      ) extends DataFrameWriter {
 
   /**
-    * Persist a data frame to a source
+    * Persist a data frame to xml/csv
     *
     * @param input the data frame to persist
     */
