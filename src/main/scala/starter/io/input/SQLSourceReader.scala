@@ -1,10 +1,10 @@
 package starter.io.input
 
 import org.apache.spark.sql.functions._
-import org.apache.spark.sql.{Column, DataFrame, SQLContext}
+import org.apache.spark.sql.{Column, DataFrame, SparkSession}
 import starter.sources.DataFrameSource
 
-class SQLSourceReader[T <: SQLContext](
+class SQLSourceReader[T <: SparkSession](
                                         val source: DataFrameSource[T]
                                       ) extends DataFrameReader {
   /**
@@ -15,7 +15,7 @@ class SQLSourceReader[T <: SQLContext](
     * @return A DataFrame of the source
     */
   override def read(filters: Column, columns: Seq[String]): DataFrame = {
-    val tableName = s"${source.serviceArea}.${source.name}"
+    val tableName = s"${source.name}"
     source.sourceSession.table(tableName)
       .filter(filters)
       .select(columns.map(col): _*)
@@ -28,7 +28,7 @@ class SQLSourceReader[T <: SQLContext](
     * @return A DataFrame of the source
     */
   override def read(columns: Seq[String]): DataFrame = {
-    val tableName = s"${source.serviceArea}.${source.name}"
+    val tableName = s"${source.name}"
     source.sourceSession.table(tableName)
       .select(columns.map(col): _*)
   }
@@ -40,7 +40,7 @@ class SQLSourceReader[T <: SQLContext](
     * @return A DataFrame of the source
     */
   override def read(filters: Column): DataFrame = {
-    val tableName = s"${source.serviceArea}.${source.name}"
+    val tableName = s"${source.name}"
     source.sourceSession.table(tableName)
       .filter(filters)
   }
@@ -51,7 +51,7 @@ class SQLSourceReader[T <: SQLContext](
     * @return A DataFrame of the source
     */
   override def read(): DataFrame = {
-    val tableName = s"${source.serviceArea}.${source.name}"
+    val tableName = s"${source.name}"
     source.sourceSession.table(tableName)
   }
 }

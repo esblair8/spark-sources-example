@@ -26,11 +26,6 @@ trait DataFrameSource[T] extends SourceSession[T] {
   def schema: StructType
 
   /**
-    * Defines the columns on a source
-    */
-  def columns: SourceColumnDefinitions
-
-  /**
     * Defines the columns a source is partitioned on
     */
   def partitionColumns: Seq[String]

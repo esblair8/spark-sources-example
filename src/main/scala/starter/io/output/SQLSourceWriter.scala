@@ -13,5 +13,5 @@ class SQLSourceWriter(source : DataFrameSource[SparkSession]) extends DataFrameW
   override def write(dataFrame: DataFrame): Unit =
     dataFrame.write.mode(source.saveMode).partitionBy(
       source.partitionColumns: _*
-    ).insertInto(s"${source.serviceArea}.${source.name}")
+    ).saveAsTable(s"${source.name}")
 }
